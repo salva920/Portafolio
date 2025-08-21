@@ -103,12 +103,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-gradient">Ing. Salvador Bermudez</span>
-            </h1>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary-800">
-              Desarrollador Web
-            </h2>
+                         <h1 className="text-5xl md:text-6xl font-bold mb-4">
+               <span className="text-gradient">Salvador Bermúdez</span>
+             </h1>
+             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-secondary-700">
+               Ingeniero en Computación | Desarrollador Full Stack
+             </h2>
             <p className="text-xl md:text-2xl text-secondary-600 mb-8 leading-relaxed">
               Especializado en React, Next.js, TypeScript y Node.js. 
               Experto en arquitectura de estado (Redux) e integración de APIs (Axios), 
