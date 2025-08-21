@@ -82,22 +82,15 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-secondary-200">
         <nav className="container-custom section-padding py-4">
-          <div className="flex items-center justify-between">
-            <motion.h1 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold text-gradient"
-            >
-              Salvador Bermudez
-            </motion.h1>
-            <div className="hidden md:flex space-x-8">
-              <a href="#sobre-mi" className="hover:text-primary-600 transition-colors">Sobre Mí</a>
-              <a href="#experiencia" className="hover:text-primary-600 transition-colors">Experiencia</a>
-              <a href="#proyectos" className="hover:text-primary-600 transition-colors">Proyectos</a>
-              <a href="#habilidades" className="hover:text-primary-600 transition-colors">Habilidades</a>
-              <a href="#contacto" className="hover:text-primary-600 transition-colors">Contacto</a>
-            </div>
-          </div>
+                     <div className="flex items-center justify-center">
+             <div className="hidden md:flex space-x-8">
+               <a href="#sobre-mi" className="hover:text-primary-600 transition-colors">Sobre Mí</a>
+               <a href="#experiencia" className="hover:text-primary-600 transition-colors">Experiencia</a>
+               <a href="#proyectos" className="hover:text-primary-600 transition-colors">Proyectos</a>
+               <a href="#habilidades" className="hover:text-primary-600 transition-colors">Habilidades</a>
+               <a href="#contacto" className="hover:text-primary-600 transition-colors">Contacto</a>
+             </div>
+           </div>
         </nav>
       </header>
 
@@ -111,9 +104,11 @@ export default function Home() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Desarrollador{' '}
-              <span className="text-gradient">Full Stack</span>
+              <span className="text-gradient">Ing. Salvador Bermudez</span>
             </h1>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary-800">
+              Desarrollador Web
+            </h2>
             <p className="text-xl md:text-2xl text-secondary-600 mb-8 leading-relaxed">
               Especializado en React, Next.js, TypeScript y Node.js. 
               Experto en arquitectura de estado (Redux) e integración de APIs (Axios), 
@@ -598,9 +593,9 @@ export default function Home() {
       <footer className="bg-secondary-900 text-white py-12">
         <div className="container-custom section-padding">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Salva</h3>
+            <h3 className="text-2xl font-bold mb-4">Ing. Salvador Bermudez</h3>
             <p className="text-secondary-400 mb-6">
-              Desarrollador Full Stack apasionado por crear soluciones digitales excepcionales
+              Desarrollador Web apasionado por crear soluciones digitales excepcionales
             </p>
             <div className="flex justify-center space-x-6 mb-6">
               <a href="#" className="text-secondary-400 hover:text-white transition-colors">

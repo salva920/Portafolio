@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Salva - Desarrollador Full Stack',
-  description: 'Desarrollador Full Stack especializado en React, Next.js, TypeScript y Node.js. Experto en arquitectura de estado (Redux) e integración de APIs.',
-  keywords: 'React, Next.js, TypeScript, Node.js, Full Stack, Desarrollador, Redux, APIs',
-  authors: [{ name: 'Salva' }],
+  title: 'Ing. Salvador Bermudez - Desarrollador Web',
+  description: 'Ingeniero en Computación y Desarrollador Web especializado en React, Next.js, TypeScript y Node.js. Experto en arquitectura de estado (Redux) e integración de APIs.',
+  keywords: 'React, Next.js, TypeScript, Node.js, Desarrollador Web, Ingeniero, Redux, APIs',
+  authors: [{ name: 'Ing. Salvador Bermudez' }],
   openGraph: {
-    title: 'Salva - Desarrollador Full Stack',
-    description: 'Desarrollador Full Stack especializado en React, Next.js, TypeScript y Node.js',
+    title: 'Ing. Salvador Bermudez - Desarrollador Web',
+    description: 'Ingeniero en Computación y Desarrollador Web especializado en React, Next.js, TypeScript y Node.js',
     type: 'website',
   },
 }
