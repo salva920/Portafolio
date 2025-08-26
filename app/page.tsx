@@ -537,11 +537,15 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary-600" />
-                  <span className="text-secondary-700">contacto@salva.dev</span>
+                  <a href="mailto:bermudezbastidass@uvm.edu.ve" className="text-secondary-700 hover:text-primary-600 transition-colors">
+                    bermudezbastidass@uvm.edu.ve
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary-600" />
-                  <span className="text-secondary-700">+58 XXX XXX XXXX</span>
+                  <a href="https://wa.me/584122176537" target="_blank" rel="noopener noreferrer" className="text-secondary-700 hover:text-primary-600 transition-colors">
+                    +58 412 217 6537
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-primary-600" />
@@ -552,10 +556,10 @@ export default function Home() {
               <div className="mt-8">
                 <h4 className="font-semibold mb-4">Sígueme en:</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 hover:bg-primary-200 transition-colors">
+                  <a href="https://github.com/salva920" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 hover:bg-primary-200 transition-colors">
                     <Github className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 hover:bg-primary-200 transition-colors">
+                  <a href="https://www.linkedin.com/in/salvador-bermudez-264a00288" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 hover:bg-primary-200 transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
@@ -619,13 +623,13 @@ export default function Home() {
               Desarrollador Web apasionado por crear soluciones digitales excepcionales
             </p>
             <div className="flex justify-center space-x-6 mb-6">
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              <a href="https://github.com/salva920" target="_blank" rel="noopener noreferrer" className="text-secondary-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/salvador-bermudez-264a00288" target="_blank" rel="noopener noreferrer" className="text-secondary-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              <a href="mailto:bermudezbastidass@uvm.edu.ve" className="text-secondary-400 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
