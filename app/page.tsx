@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { 
   Code, 
   Globe, 
@@ -18,6 +19,13 @@ import {
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +37,39 @@ export default function Home() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      await emailjs.sendForm(
+        'service_wnmikue', // Tu Service ID
+        'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID
+        e.currentTarget,
+        'YOUR_PUBLIC_KEY' // Reemplaza con tu Public Key
+      )
+      
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+      
+      setTimeout(() => setSubmitStatus('idle'), 3000)
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSubmitStatus('error')
+      setTimeout(() => setSubmitStatus('idle'), 3000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const projects = [
@@ -574,15 +615,19 @@ export default function Home() {
               className="bg-gradient-primary p-8 rounded-2xl"
             >
               <h3 className="text-2xl font-semibold mb-6">Envíame un Mensaje</h3>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-secondary-700 mb-2">
                     Nombre
                   </label>
                   <input 
                     type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Tu nombre"
+                    required
                   />
                 </div>
                 <div>
@@ -591,8 +636,12 @@ export default function Home() {
                   </label>
                   <input 
                     type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="tu@email.com"
+                    required
                   />
                 </div>
                 <div>
@@ -600,14 +649,36 @@ export default function Home() {
                     Mensaje
                   </label>
                   <textarea 
+                    name="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Cuéntame sobre tu proyecto..."
+                    required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  Enviar Mensaje
-                </button>
+                                 
+                 {/* Mensajes de estado */}
+                 {submitStatus === 'success' && (
+                   <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                     ¡Mensaje enviado exitosamente! Te responderé pronto.
+                   </div>
+                 )}
+                 
+                 {submitStatus === 'error' && (
+                   <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                     Error al enviar el mensaje. Inténtalo de nuevo.
+                   </div>
+                 )}
+                 
+                 <button 
+                   type="submit" 
+                   disabled={isSubmitting}
+                   className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                 >
+                   {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                 </button>
               </form>
             </motion.div>
           </div>
