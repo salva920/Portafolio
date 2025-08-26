@@ -53,10 +53,10 @@ export default function Home() {
 
     try {
       await emailjs.sendForm(
-        'service_wnmikue', // Tu Service ID
-        'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID
+        'service_wnmikue', // Service ID
+        'template_eu4io2r', // Template ID
         e.currentTarget,
-        'YOUR_PUBLIC_KEY' // Reemplaza con tu Public Key
+        'LT9M24EGeCFr-l9Rj' // Public Key
       )
       
       setSubmitStatus('success')
