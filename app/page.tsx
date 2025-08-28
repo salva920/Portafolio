@@ -172,9 +172,10 @@ export default function Home() {
                Ingeniero en Computación | Desarrollador web
              </h2>
             <p className="text-xl md:text-2xl text-secondary-600 mb-8 leading-relaxed">
-              Especializado en React, Next.js, TypeScript y Node.js. 
-              Experto en arquitectura de estado (Redux) e integración de APIs (Axios), 
-              optimizando tanto la experiencia de usuario como el rendimiento técnico.
+            Desarrollo aplicaciones web completas que modernizan operaciones mediante 
+            sistemas personalizados. Transformo necesidades complejas en software 
+            funcional que impulsa el crecimiento empresarial, optimizando tanto la 
+            experiencia de usuario como el rendimiento técnico.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#proyectos" className="btn-primary">
