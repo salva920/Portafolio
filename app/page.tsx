@@ -77,7 +77,7 @@ export default function Home() {
       title: 'Fitcher',
       description: 'Red social desarrollada con MERN Stack. Integración de métodos de pago, suscripciones y APIs.',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux'],
-      image: '/api/placeholder/400/250',
+      image: '/fitcher.png',
       link: 'https://fitcher.com/',
       featured: true
     },
@@ -85,7 +85,7 @@ export default function Home() {
       title: 'GYMJMR',
       description: 'Aplicación web para gestión de gimnasios con sistema de clientes y suscripciones automatizadas.',
       tech: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Node.js'],
-      image: '/api/placeholder/400/250',
+      image: '/gym.png',
       link: 'https://gym-jmr-lake.vercel.app',
       featured: true
     },
@@ -93,7 +93,7 @@ export default function Home() {
       title: 'Suministros Romero',
       description: 'Sistema de gestión para ferreterías con inventario FIFO y procesador de ventas.',
       tech: ['React', 'Node.js', 'PostgreSQL', 'Redux'],
-      image: '/api/placeholder/400/250',
+      image: '/ferreteria.png',
       link: 'https://suministros-frontend.vercel.app',
       featured: true
     },
@@ -101,7 +101,7 @@ export default function Home() {
       title: 'RepuestosVladi',
       description: 'E-commerce para repuestos de autos con sistema de inventario avanzado.',
       tech: ['React', 'MongoDB Atlas', 'Node.js', 'Express'],
-      image: '/api/placeholder/400/250',
+      image: '/repuestos.png',
       link: 'https://repuestos-theta.vercel.app/login',
       featured: false
     }
@@ -169,7 +169,7 @@ export default function Home() {
                <span className="text-gradient">Salvador Bermúdez</span>
              </h1>
              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-secondary-700">
-               Ingeniero en Computación | Desarrollador Full Stack
+               Ingeniero en Computación | Desarrollador web
              </h2>
             <p className="text-xl md:text-2xl text-secondary-600 mb-8 leading-relaxed">
               Especializado en React, Next.js, TypeScript y Node.js. 
@@ -414,7 +414,11 @@ export default function Home() {
                 className="card overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-primary-100 to-blue-100 flex items-center justify-center">
-                  <Code className="w-16 h-16 text-primary-600" />
+                  <img 
+                    src={project.image} 
+                    alt={`${project.title} - Captura de pantalla`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
